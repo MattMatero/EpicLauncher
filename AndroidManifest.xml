@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.matero.epiclauncher"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+    	
+        >
+        
+        <activity 
+            android:name="me.matero.epiclauncher.HomeActivity"
+            android:label="launcher_home"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+            android:launchMode="singleTask"
+            android:stateNotNeeded="true"
+            >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <action android:name="android.intent.category.HOME"/>
+            <action android:name="android.intent.category.DEFAULT"/>
+        </intent-filter>
+        </activity>
+        <activity 
+            android:name="me.matero.epiclauncher.AppsListActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            >
+        </activity>
+    </application>
+
+</manifest>
